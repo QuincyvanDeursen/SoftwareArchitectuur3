@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaApp", "SoaApp\SoaApp.csproj", "{06B54668-29D9-490B-BEF2-61E7DE7C8B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaAppTests", "SoaAppTests\SoaAppTests.csproj", "{DE0AF8BA-10E6-447F-9AB8-874EE9CDC420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B54668-29D9-490B-BEF2-61E7DE7C8B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B54668-29D9-490B-BEF2-61E7DE7C8B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B54668-29D9-490B-BEF2-61E7DE7C8B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B54668-29D9-490B-BEF2-61E7DE7C8B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0AF8BA-10E6-447F-9AB8-874EE9CDC420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0AF8BA-10E6-447F-9AB8-874EE9CDC420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0AF8BA-10E6-447F-9AB8-874EE9CDC420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AF8BA-10E6-447F-9AB8-874EE9CDC420}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D427E36F-C934-4F88-8EC5-55D13A05D9B6}
+	EndGlobalSection
+EndGlobal
