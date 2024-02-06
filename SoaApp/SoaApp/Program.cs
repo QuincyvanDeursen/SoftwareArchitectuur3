@@ -3,7 +3,7 @@
 Movie movie = new("shrek");
 
 //weekend
-MovieScreening movieScreening = new(movie, new DateTime(2024, 3, 10), 10);
+MovieScreening movieScreening = new(movie, new DateTime(2024, 2, 10), 10);
 
 // weekday 
 // MovieScreening movieScreening = new(movie, new DateTime(2024, 2, 6), 10);
