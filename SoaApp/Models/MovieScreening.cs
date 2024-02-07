@@ -1,9 +1,14 @@
-﻿namespace SoaApp.Core.Models
+﻿using Newtonsoft.Json;
+
+namespace SoaApp.Core.Models
 {
     public class MovieScreening
     {
+        [JsonProperty]
         private DateTime _dateAndTime;
+        [JsonProperty]
         private decimal _pricePerSeat;
+        [JsonProperty]
         private Movie _movie;
 
         public MovieScreening(Movie movie, DateTime dateAndTime, decimal pricePerSeat)

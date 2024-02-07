@@ -1,26 +1,44 @@
 ﻿
+using Newtonsoft.Json;
 using SoaApp.Core.DiscountCalculation;
+using SoaApp.Core.ExportHandler;
 
 namespace SoaApp.Core.Models
 {
     public class Order
     {
+        [JsonProperty]
         private int _orderNr;
+        [JsonProperty]
         private bool _isStudentOrder;
+
+        [JsonProperty]
         private IList<MovieTicket> _movieTickets = new List<MovieTicket>();
+
         private GroupDiscount _groupDiscount;
         private PremiumDiscount _premiumDiscount;
         private SecondTicketFreeDiscount _secondTicketFreeDiscount;
+
+        private JSONExport _jsonExport;
+        private PlainTextExport _plainTextExport;
+
         private Discount _discount;
+        private Export _export;
 
         public Order(int orderNr, bool isStudentOrder)
         {
+
             _orderNr = orderNr;
             _isStudentOrder = isStudentOrder;
             _discount = new Discount();
+            _export = new Export();
+
             _groupDiscount = new GroupDiscount(10);
             _premiumDiscount = new PremiumDiscount(1);
             _secondTicketFreeDiscount = new SecondTicketFreeDiscount();
+
+            _jsonExport = new JSONExport();
+            _plainTextExport = new PlainTextExport();
         }
 
         public int GetOrder()
@@ -79,7 +97,20 @@ namespace SoaApp.Core.Models
 
         public void Export(TicketExportFormat exportFormat)
         {
-
+            //Choose export format
+            switch (exportFormat)
+            {
+                case TicketExportFormat.JSON:
+                    _export.SetExport(_jsonExport);
+                    _export.ExportToFile(this); // fill with order class
+                    break;
+                case TicketExportFormat.PLAINTEXT:
+                    _export.SetExport(_plainTextExport);
+                    _export.ExportToFile(this); // fill with order class
+                    break;
+                default:
+                    throw new ArgumentException("No valid format");
+            }
         }
     }
 }

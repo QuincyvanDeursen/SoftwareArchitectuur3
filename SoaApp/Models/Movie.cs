@@ -1,7 +1,10 @@
-﻿namespace SoaApp.Core.Models
+﻿using Newtonsoft.Json;
+
+namespace SoaApp.Core.Models
 {
     public class Movie
     {
+        [JsonProperty]
         private string Title { get; set; } = string.Empty;
 
         private IList<MovieScreening> _movieScreenings { get; set; } = new List<MovieScreening>();
