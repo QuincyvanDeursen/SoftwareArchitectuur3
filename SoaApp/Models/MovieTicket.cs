@@ -1,10 +1,16 @@
-﻿namespace SoaApp.Core.Models
+﻿using Newtonsoft.Json;
+
+namespace SoaApp.Core.Models
 {
     public class MovieTicket
     {
+        [JsonProperty]
         private int _rowNr;
+        [JsonProperty]
         private int _seatNr;
+        [JsonProperty]
         private bool _isPremium;
+        [JsonProperty]
         private MovieScreening MovieScreening;
 
         public MovieTicket(MovieScreening movieScreening, int rowNr, int seatNr, bool isPremiumReservation)
@@ -34,7 +40,7 @@
 
         public override string ToString()
         {
-            return "ticket: " + MovieScreening.ToString();
+            return $"row: {_rowNr} seat: {_seatNr} movie: {MovieScreening.ToString()}";
         }
 
     }
